@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SMSGateway" Class="DBSMSGatewayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=123.30.181.81;Initial Catalog=SMSGateway;Persist Security Info=True;User ID=tuananh" SettingsObjectName="LibData.Properties.Settings" SettingsPropertyName="SMSGatewayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LogCallVTB" Member="LogCallVTBs">
+    <Type Name="LogCallVTB">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Request" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Response" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Telco" Member="Telcos">
+    <Type Name="Telco">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceSMS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Telco_Route_Telco" Member="Route_Telcos" ThisKey="Id" OtherKey="IdTelco" Type="Route_Telco" />
+      <Association Name="Telco_SubTelco" Member="SubTelcos" ThisKey="Id" OtherKey="IdTelco" Type="SubTelco" />
+      <Association Name="Telco_SubTelco1" Member="SubTelcos1" ThisKey="Id" OtherKey="IdTelco" Type="SubTelco" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QueueService" Member="QueueServices">
+    <Type Name="QueueService">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProcessingCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Receiver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SMSID" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Route" Member="Routes">
+    <Type Name="Route">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="RouteNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Route_Telco" Member="Route_Telcos">
+    <Type Name="Route_Telco">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTelco" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ratio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Telco_Route_Telco" Member="Telco" ThisKey="IdTelco" OtherKey="Id" Type="Telco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubTelco" Member="SubTelcos">
+    <Type Name="SubTelco">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdTelco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartPhone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Telco_SubTelco" Member="Telco" ThisKey="IdTelco" OtherKey="Id" Type="Telco" IsForeignKey="true" />
+      <Association Name="Telco_SubTelco1" Member="Telco1" ThisKey="IdTelco" OtherKey="Id" Type="Telco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MTQueueReport" Member="MTQueueReports">
+    <Type Name="MTQueueReport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProcessingCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Receiver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TimeSend" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMSID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RouteName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MT" Member="MTs">
+    <Type Name="MT">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dest" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProcessingCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Receiver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TimeSend" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMSID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RouteName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdTelco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CheckSMSID" Method="CheckSMSID" IsComposable="true">
+    <Parameter Name="SMSID" Parameter="sMSID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckSMSID_MTQueueReport" Method="CheckSMSID_MTQueueReport" IsComposable="true">
+    <Parameter Name="SMSID" Parameter="sMSID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.875" name="DBSMSGateway">
+  <DataContextMoniker Name="/DBSMSGatewayDataContext" />
+  <nestedChildShapes>
+    <classShape Id="067dc484-f0b6-42bc-8f12-5ec1c926b4c1" absoluteBounds="0.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/LogCallVTB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08d67fb0-d45f-4c50-8140-54cea94a7545" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e3ac5fa-11c3-4e10-b1eb-4b914552b72a" absoluteBounds="0.75, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/Telco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0dd799b-681b-4ba9-b4ab-77ed09bdab52" absoluteBounds="0.765, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98e802fa-64d2-4448-87e3-e25e5911c666" absoluteBounds="6.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/QueueService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7551ab4e-80b1-4708-882a-42bf01faa1aa" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f67dceb-c499-421b-9dfb-7e96bf2be811" absoluteBounds="6.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/Route" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e17c94e-5670-4a99-8b38-f18d47c9d842" absoluteBounds="6.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87d26d24-b037-412c-9d6b-4e9547fc00a1" absoluteBounds="3.5, 3.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/Route_Telco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e2e51f5-0179-4ee0-8390-14ecbf1d8248" absoluteBounds="3.515, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="158a5431-341f-4a65-92b4-be8e0fc00511" absoluteBounds="3.5, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/SubTelco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c0df9df-e009-4553-a958-1d907924d465" absoluteBounds="3.515, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.41429768880208); (3.5 : 3.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBSMSGatewayDataContext/Telco/Telco_Route_Telco" />
+      <nodes>
+        <classShapeMoniker Id="6e3ac5fa-11c3-4e10-b1eb-4b914552b72a" />
+        <classShapeMoniker Id="87d26d24-b037-412c-9d6b-4e9547fc00a1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.125); (1.75 : 1.5624995); (2.19791916666667 : 1.5624995 : JumpStart); (2.36458583333333 : 1.5624995 : JumpEnd); (3.5 : 1.5624995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBSMSGatewayDataContext/Telco/Telco_SubTelco" />
+      <nodes>
+        <classShapeMoniker Id="6e3ac5fa-11c3-4e10-b1eb-4b914552b72a" />
+        <classShapeMoniker Id="158a5431-341f-4a65-92b4-be8e0fc00511" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 2.125); (2.2812525 : 1.24999725); (3.5 : 1.24999725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBSMSGatewayDataContext/Telco/Telco_SubTelco1" />
+      <nodes>
+        <classShapeMoniker Id="6e3ac5fa-11c3-4e10-b1eb-4b914552b72a" />
+        <classShapeMoniker Id="158a5431-341f-4a65-92b4-be8e0fc00511" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3425705d-c56a-4faa-a00e-4fcea893bf60" absoluteBounds="6.25, 5.125, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/MTQueueReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="165f520a-f508-45bc-9895-ff124eb1d993" absoluteBounds="6.265, 5.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5fc76a9-0ceb-4715-ae28-e0d5c067bc87" absoluteBounds="4.5, 6.375, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DBSMSGatewayDataContext/MT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fd09ff7-e39f-4d47-98ae-9c2b07256c9e" absoluteBounds="4.515, 6.835, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

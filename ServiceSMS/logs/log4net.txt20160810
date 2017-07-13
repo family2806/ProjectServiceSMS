@@ -1,0 +1,257 @@
+﻿2016-08-10 15:21:38,977 [6] INFO  SMSGW - xmlreq:a
+2016-08-10 15:21:39,091 [6] ERROR SMSGW - System.InvalidOperationException: There is an error in XML document (1, 1). ---> System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read6_SMSRQ()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at ServiceSMS.SMSGW.SendMT(String xmlreq) in D:\LamViec\VietPhat\MO-MT\Vietinbank\ProjectServiceSMS\ServiceSMS\SMSGW.asmx.cs:line 32
+2016-08-10 15:23:14,252 [6] INFO  SMSGW - xmlreq:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%3C%2FDATA%3E%0A%3C%2FSMSRQ%3E
+2016-08-10 15:23:14,359 [6] ERROR SMSGW - System.InvalidOperationException: There is an error in XML document (1, 1). ---> System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read6_SMSRQ()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at ServiceSMS.SMSGW.SendMT(String xmlreq) in D:\LamViec\VietPhat\MO-MT\Vietinbank\ProjectServiceSMS\ServiceSMS\SMSGW.asmx.cs:line 32
+2016-08-10 15:25:04,901 [6] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%3C%2FDATA%3E%0A%3C%2FSMSRQ%3E
+2016-08-10 15:25:04,912 [6] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>Vietinbank</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+	</DATA>
+</SMSRQ>
+2016-08-10 15:25:27,857 [6] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%3C%2FDATA%3E%0A%3C%2FSMSRQ%3E
+2016-08-10 15:25:27,857 [6] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>Vietinbank</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+	</DATA>
+</SMSRQ>
+2016-08-10 15:25:56,968 [6] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%
+2016-08-10 15:25:56,968 [6] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>Vietinbank</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+	%
+2016-08-10 15:25:56,987 [6] ERROR SMSGW - System.InvalidOperationException: There is an error in XML document (27, 3). ---> System.Xml.XmlException: Unexpected end of file has occurred. The following elements are not closed: SMS, DATA, SMSRQ. Line 27, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlLoader.ReadCurrentNode(XmlDocument doc, XmlReader reader)
+   at System.Xml.XmlDocument.ReadNode(XmlReader reader)
+   at System.Xml.Serialization.XmlSerializationReader.UnknownNode(Object o, String qnames)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read3_SMSREQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read4_DATAREQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read5_SMSRQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read6_SMSRQ()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at ServiceSMS.SMSGW.SendMT(String xmlreq) in D:\LamViec\VietPhat\MO-MT\Vietinbank\ProjectServiceSMS\ServiceSMS\SMSGW.asmx.cs:line 34
+2016-08-10 15:27:04,987 [8] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%
+2016-08-10 15:27:04,999 [8] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>Vietinbank</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+	%
+2016-08-10 15:27:05,115 [8] ERROR SMSGW - System.InvalidOperationException: There is an error in XML document (27, 3). ---> System.Xml.XmlException: Unexpected end of file has occurred. The following elements are not closed: SMS, DATA, SMSRQ. Line 27, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ThrowUnclosedElements()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlLoader.ReadCurrentNode(XmlDocument doc, XmlReader reader)
+   at System.Xml.XmlDocument.ReadNode(XmlReader reader)
+   at System.Xml.Serialization.XmlSerializationReader.UnknownNode(Object o, String qnames)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read3_SMSREQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read4_DATAREQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read5_SMSRQ(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderSMSRQ.Read6_SMSRQ()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at ServiceSMS.SMSGW.SendMT(String xmlreq) in D:\LamViec\VietPhat\MO-MT\Vietinbank\ProjectServiceSMS\ServiceSMS\SMSGW.asmx.cs:line 34
+2016-08-10 15:28:26,758 [8] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3EVietinbank%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3EVietinbank%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%3C%2FDATA%3E%0A%3C%2FSMSRQ%3E
+2016-08-10 15:28:26,758 [8] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>Vietinbank</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>Vietinbank</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+	</DATA>
+</SMSRQ>
+2016-08-10 15:28:43,295 [8] INFO  SMSGW - User: Vietinbank
+2016-08-10 16:10:24,852 [7] INFO  SMSGW - xmlreq befor:%3CSMSRQ%3E%0A%09%3CHEADER%3E%0A%09%09%3CSOURCE%3EVietinbank%3C%2FSOURCE%3E%0A%09%09%3CDEST%3EVietinbank%3C%2FDEST%3E%0A%09%09%3CTRANSID%3EVietinbank%3C%2FTRANSID%3E%0A%09%09%3CTRANSTIME%3E20160810160800%3C%2FTRANSTIME%3E%0A%09%09%3CUSER%3EVietinbank%3C%2FUSER%3E%0A%09%09%3CPWD%3EVietinbank%3C%2FPWD%3E%0A%09%3C%2FHEADER%3E%0A%09%3CDATA%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3E1%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3E1%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%09%3CSMS%3E%0A%09%09%09%3CSMSID%3EVietinbank%3C%2FSMSID%3E%0A%09%09%09%3CPROCESSINGCODE%3EVietinbank%3C%2FPROCESSINGCODE%3E%0A%09%09%09%3CPRIORITY%3E2%3C%2FPRIORITY%3E%0A%09%09%09%3CRECEIVER%3EVietinbank%3C%2FRECEIVER%3E%0A%09%09%09%3CCONTENT%3EVietinbank%3C%2FCONTENT%3E%0A%09%09%3C%2FSMS%3E%0A%09%3C%2FDATA%3E%0A%3C%2FSMSRQ%3E
+2016-08-10 16:10:24,861 [7] INFO  SMSGW - xmlreq after:<SMSRQ>
+	<HEADER>
+		<SOURCE>Vietinbank</SOURCE>
+		<DEST>Vietinbank</DEST>
+		<TRANSID>Vietinbank</TRANSID>
+		<TRANSTIME>20160810160800</TRANSTIME>
+		<USER>Vietinbank</USER>
+		<PWD>Vietinbank</PWD>
+	</HEADER>
+	<DATA>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>1</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>1</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+		<SMS>
+			<SMSID>Vietinbank</SMSID>
+			<PROCESSINGCODE>Vietinbank</PROCESSINGCODE>
+			<PRIORITY>2</PRIORITY>
+			<RECEIVER>Vietinbank</RECEIVER>
+			<CONTENT>Vietinbank</CONTENT>
+		</SMS>
+	</DATA>
+</SMSRQ>

@@ -1,0 +1,175 @@
+﻿2016-12-06 14:06:18,611 [5] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;yyyyMMddhhmmss&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:06:18,621 [5] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>yyyyMMddhhmmss</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:06:18,687 [5] ERROR SMSGW - System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at ServiceSMS.SMSGW.SendMT(String xmlreq) in D:\LamViec\VietPhat\MO-MT\Vietinbank\ProjectServiceSMS\ServiceSMS\SMSGW.asmx.cs:line 48
+2016-12-06 14:06:18,716 [5] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>yyyyMMddhhmmss</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>3</ERRCODE>
+      <ERRDESC>System Error</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:07:18,109 [11] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:07:18,109 [11] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:07:18,231 [11] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:08:55,968 [20] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;620000&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:08:55,977 [20] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>620000</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:08:56,082 [20] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:10:31,743 [8] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:10:31,744 [8] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:10:31,781 [8] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:11:16,039 [20] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:11:16,039 [20] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:11:16,075 [20] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:13:13,765 [22] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:13:13,765 [22] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:13:13,815 [22] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:14:24,373 [18] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:14:24,373 [18] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:14:24,415 [18] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:14:44,192 [22] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:14:44,192 [22] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:14:44,200 [22] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>
+2016-12-06 14:14:53,938 [20] INFO  SMSGW - xmlreq befor:&lt;SMSRQ&gt;   &lt;HEADER&gt;     &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;     &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;     &lt;TRANSID&gt;123456&lt;/TRANSID&gt;     &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;     &lt;USER&gt;vietinbank&lt;/USER&gt;     &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;   &lt;/HEADER&gt;   &lt;DATA&gt;     &lt;SMS&gt;       &lt;SMSID&gt;1&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;     &lt;SMS&gt;       &lt;SMSID&gt;2&lt;/SMSID&gt;       &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;       &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;       &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;       &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;     &lt;/SMS&gt;   &lt;/DATA&gt; &lt;/SMSRQ&gt;
+2016-12-06 14:14:53,938 [20] INFO  SMSGW - xmlreq after:<SMSRQ>   <HEADER>     <SOURCE>VIETINBANK</SOURCE>     <DEST>HUNG THINH</DEST>     <TRANSID>123456</TRANSID>     <TRANSTIME>20161206140622</TRANSTIME>     <USER>vietinbank</USER>     <PWD>vietinbank@2016</PWD>   </HEADER>   <DATA>     <SMS>       <SMSID>1</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0904904101</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>     </SMS>     <SMS>       <SMSID>2</SMSID>       <PROCESSINGCODE>0</PROCESSINGCODE>       <PRIORITY>1</PRIORITY>       <RECEIVER>0984819125</RECEIVER>       <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>     </SMS>   </DATA> </SMSRQ>
+2016-12-06 14:14:53,945 [20] INFO  SMSGW - Response: <?xml version="1.0" encoding="utf-16"?>
+<SMSRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <ERROR>
+      <ERRCODE>0</ERRCODE>
+      <ERRDESC>Success</ERRDESC>
+    </ERROR>
+  </DATA>
+</SMSRS>

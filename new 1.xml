@@ -1,0 +1,54 @@
+<SMSRQ>
+  <HEADER>
+    <SOURCE>VIETINBANK</SOURCE>
+    <DEST>HUNG THINH</DEST>
+    <TRANSID>123456</TRANSID>
+    <TRANSTIME>20161206140622</TRANSTIME>
+    <USER>vietinbank</USER>
+    <PWD>vietinbank@2016</PWD>
+  </HEADER>
+  <DATA>
+    <SMS>
+      <SMSID>1</SMSID>
+      <PROCESSINGCODE>0</PROCESSINGCODE>
+      <PRIORITY>1</PRIORITY>
+      <RECEIVER>0904904101</RECEIVER>
+      <CONTENT><![CDATA[Noi dung sms 01]]></CONTENT>
+    </SMS>
+    <SMS>
+      <SMSID>2</SMSID>
+      <PROCESSINGCODE>0</PROCESSINGCODE>
+      <PRIORITY>1</PRIORITY>
+      <RECEIVER>0984819125</RECEIVER>
+      <CONTENT><![CDATA[Noi dung sms 02]]></CONTENT>
+    </SMS>
+  </DATA>
+</SMSRQ>
+
+
+&lt;SMSRQ&gt;
+  &lt;HEADER&gt;
+    &lt;SOURCE&gt;VIETINBANK&lt;/SOURCE&gt;
+    &lt;DEST&gt;HUNG THINH&lt;/DEST&gt;
+    &lt;TRANSID&gt;123456&lt;/TRANSID&gt;
+    &lt;TRANSTIME&gt;20161206140622&lt;/TRANSTIME&gt;
+    &lt;USER&gt;vietinbank&lt;/USER&gt;
+    &lt;PWD&gt;vietinbank@2016&lt;/PWD&gt;
+  &lt;/HEADER&gt;
+  &lt;DATA&gt;
+    &lt;SMS&gt;
+      &lt;SMSID&gt;1&lt;/SMSID&gt;
+      &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;
+      &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;
+      &lt;RECEIVER&gt;0904904101&lt;/RECEIVER&gt;
+      &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 01]]&gt;&lt;/CONTENT&gt;
+    &lt;/SMS&gt;
+    &lt;SMS&gt;
+      &lt;SMSID&gt;2&lt;/SMSID&gt;
+      &lt;PROCESSINGCODE&gt;0&lt;/PROCESSINGCODE&gt;
+      &lt;PRIORITY&gt;1&lt;/PRIORITY&gt;
+      &lt;RECEIVER&gt;0984819125&lt;/RECEIVER&gt;
+      &lt;CONTENT&gt;&lt;![CDATA[Noi dung sms 02]]&gt;&lt;/CONTENT&gt;
+    &lt;/SMS&gt;
+  &lt;/DATA&gt;
+&lt;/SMSRQ&gt;

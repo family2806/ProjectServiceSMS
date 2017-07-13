@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://ws.sms.vnet.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://ws.sms.vnet.com" targetNamespace="http://ws.sms.vnet.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="SentRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="source_addr" type="xsd:string" />
+    <wsdl:part name="dest_addr" type="xsd:string" />
+    <wsdl:part name="message" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sentMultiRequest">
+    <wsdl:part name="datamsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sentMultiResponse">
+    <wsdl:part name="sentMultiReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBalanceResponse">
+    <wsdl:part name="getBalanceReturn" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="checkMessageRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="hash_message" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkMessageResponse">
+    <wsdl:part name="checkMessageReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getReportDayRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="dayReport" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sentDataResponse">
+    <wsdl:part name="sentDataReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDlrResponse">
+    <wsdl:part name="getDlrReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SentResponse">
+    <wsdl:part name="SentReturn" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getBalanceRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getReportDayResponse">
+    <wsdl:part name="getReportDayReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDlrRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="msgid" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sentDataRequest">
+    <wsdl:part name="datamsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="smsapi">
+    <wsdl:operation name="sentData" parameterOrder="datamsg">
+      <wsdl:input name="sentDataRequest" message="impl:sentDataRequest" />
+      <wsdl:output name="sentDataResponse" message="impl:sentDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkMessage" parameterOrder="username password hash_message">
+      <wsdl:input name="checkMessageRequest" message="impl:checkMessageRequest" />
+      <wsdl:output name="checkMessageResponse" message="impl:checkMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDlr" parameterOrder="username password msgid">
+      <wsdl:input name="getDlrRequest" message="impl:getDlrRequest" />
+      <wsdl:output name="getDlrResponse" message="impl:getDlrResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sentMulti" parameterOrder="datamsg">
+      <wsdl:input name="sentMultiRequest" message="impl:sentMultiRequest" />
+      <wsdl:output name="sentMultiResponse" message="impl:sentMultiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Sent" parameterOrder="username password source_addr dest_addr message">
+      <wsdl:input name="SentRequest" message="impl:SentRequest" />
+      <wsdl:output name="SentResponse" message="impl:SentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBalance" parameterOrder="username password">
+      <wsdl:input name="getBalanceRequest" message="impl:getBalanceRequest" />
+      <wsdl:output name="getBalanceResponse" message="impl:getBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportDay" parameterOrder="username password dayReport">
+      <wsdl:input name="getReportDayRequest" message="impl:getReportDayRequest" />
+      <wsdl:output name="getReportDayResponse" message="impl:getReportDayResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="smsapiSoapBinding" type="impl:smsapi">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="sentData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sentDataRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="sentDataResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkMessageRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="checkMessageResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDlr">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDlrRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="getDlrResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sentMulti">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sentMultiRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="sentMultiResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sent">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="SentRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="SentResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getBalanceRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="getBalanceResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportDay">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getReportDayRequest">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:input>
+      <wsdl:output name="getReportDayResponse">
+        <wsdlsoap:body use="literal" namespace="http://ws.sms.vnet.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="smsapiService">
+    <wsdl:port name="smsapi" binding="impl:smsapiSoapBinding">
+      <wsdlsoap:address location="http://sms.vnet.vn:8082/api/services/smsapi" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
